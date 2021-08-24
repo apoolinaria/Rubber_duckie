@@ -1,0 +1,165 @@
+.body {
+  display: flex;
+}
+.header {
+  height: 40px;
+  width: 100%;
+  background-color: #ffc700;
+}
+.duck-container {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.duck-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+.imessage {
+  font-size: 1.05rem;
+  margin: 0 auto 1rem;
+  max-width: 600px;
+  padding: 0.25rem 0.875rem;
+}
+.button-container {
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+}
+.button-more {
+  color: #ffffff;
+  height: 35px;
+  width: 90px;
+  background: #ffc700;
+  border: 1px solid #ffa903;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(255, 169, 3, 0.4);
+  border-radius: 8px;
+}
+.button-reset {
+  margin-top: 7px;
+  color: #ffa903;
+  height: 35px;
+  width: 90px;
+  background: #ffffff;
+  border: 1px solid #ffc700;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(255, 169, 3, 0.4);
+  border-radius: 8px;
+}
+
+/*  */
+
+.chat {
+  width: 300px;
+  border: solid 1px #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.messages {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.mine {
+  align-items: flex-end;
+}
+
+.mine .message {
+  color: white;
+  margin-left: 25%;
+  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+.mine .message.last:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  background-attachment: fixed;
+  border-bottom-left-radius: 15px;
+}
+
+.mine .message.last:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -10px;
+  width: 10px;
+  height: 20px;
+  background: white;
+  border-bottom-left-radius: 10px;
+}
+
+/* Animations */
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.duck-shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
