@@ -2,20 +2,25 @@
   display: flex;
 }
 .header {
-  height: 40px;
+  height: 60px;
   width: 100%;
+  text-align: left;
+  padding-left: 5%;
   background-color: #ffc700;
+}
+.header img {
+  height: 60px;
 }
 .duck-container {
   height: 100%;
   width: 70%;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .duck-image {
   max-width: 100%;
   max-height: 100%;
+  width: 400px;
 }
 .imessage {
   font-size: 1.05rem;
@@ -23,10 +28,22 @@
   max-width: 600px;
   padding: 0.25rem 0.875rem;
 }
+.input-filed {
+  margin-right: 35px;
+  background: #ffffff;
+  border: 1px solid #ffc700;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(255, 169, 3, 0.4);
+  border-radius: 8px;
+  height: 35px;
+  width: 74%;
+}
 .button-container {
   flex-direction: column;
   display: flex;
   position: absolute;
+  padding-top: 35px;
+  padding-left: 170px;
 }
 .button-more {
   color: #ffffff;
@@ -37,7 +54,20 @@
   box-sizing: border-box;
   box-shadow: 2px 2px 5px rgba(255, 169, 3, 0.4);
   border-radius: 8px;
+  justify-content: center;
 }
+.button-google {
+  color: #ffffff;
+  display: block;
+  display: inline-block;
+  text-align: center;
+  background: #ffc700;
+  border: 1px solid #ffa903;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(255, 169, 3, 0.4);
+  border-radius: 8px;
+}
+
 .button-reset {
   margin-top: 7px;
   color: #ffa903;
