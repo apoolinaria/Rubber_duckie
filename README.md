@@ -1,4 +1,4 @@
-# Rubber_duckie
+# Rubber_duckie :hatched_chick:
 
 ### An iconic rubber duck that helps developers debug their code by asking leading questions
 
